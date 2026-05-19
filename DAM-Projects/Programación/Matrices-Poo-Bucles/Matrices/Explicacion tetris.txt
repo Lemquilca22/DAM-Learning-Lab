@@ -1,0 +1,43 @@
+EXPLICACION TETRIS
+import java.util.Scanner;
+
+public class TetrisSimple {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 1. Leer dimensiones (filas y columnas)
+        int filas = sc.nextInt();
+        int columnas = sc.nextInt();
+        int[][] tablero = new int[filas][columnas];
+
+        // 2. Llenar el tablero con los datos de entrada
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                tablero[i][j] = sc.nextInt();
+            }
+        }
+
+        // 3. Revisar cada fila e imprimir solo las que NO están completas
+        for (int i = 0; i < filas; i++) {
+            boolean estaLlena = true;
+
+            // Revisamos si hay algún 0 en la fila
+            for (int j = 0; j < columnas; j++) {
+                if (tablero[i][j] == 0) {
+                    estaLlena = false; // Si encontramos un 0, la fila NO está llena
+                    break;             // No hace falta seguir revisando esta fila
+                }
+            }
+
+            // 4. Si la fila NO está llena, la mostramos en la salida
+            if (!estaLlena) {
+                for (int j = 0; j < columnas; j++) {
+                    System.out.print(tablero[i][j] + " ");
+                }
+                System.out.println(); // Salto de línea para la siguiente fila
+            }
+        }
+        
+        sc.close();
+    }
+}

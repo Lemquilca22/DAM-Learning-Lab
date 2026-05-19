@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/fxml/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="🍔 BURGER APP FX" />
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
+        </columnConstraints>
+
+        <children>
+            <Label text="Nombre:" />
+            <TextField fx:id="txtNombre" GridPane.columnIndex="1" />
+
+            <Label text="Tamaño:" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cbTamanio" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Pan Base:" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cbPanInf" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Ingrediente 1:" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cbIng1" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Carne:" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cbCarne" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <Label text="Ingrediente 2:" GridPane.rowIndex="5" />
+            <ComboBox fx:id="cbIng2" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+            <Label text="Pan Top:" GridPane.rowIndex="6" />
+            <ComboBox fx:id="cbPanSup" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <Label text="Bebida:" GridPane.rowIndex="7" />
+            <ComboBox fx:id="cbBebida" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        </children>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <Button onAction="#onFinalizarPedidoClick" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" text="GENERAR PEDIDO" />
+
+    <TextArea fx:id="txtRecibo" editable="false" prefHeight="150.0" promptText="Tu recibo aparecerá aquí..." />
+</VBox>

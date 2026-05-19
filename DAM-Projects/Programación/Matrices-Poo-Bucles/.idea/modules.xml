@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/EJERCICIOSPALNACHO.iml" filepath="$PROJECT_DIR$/.idea/EJERCICIOSPALNACHO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Matrices/Matrices.iml" filepath="$PROJECT_DIR$/Matrices/Matrices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Metodos/Metodos.iml" filepath="$PROJECT_DIR$/Metodos/Metodos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Vectores/Vectores.iml" filepath="$PROJECT_DIR$/Vectores/Vectores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Condiciones/ejercicios.iml" filepath="$PROJECT_DIR$/Condiciones/ejercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bucles/ejercicios2.iml" filepath="$PROJECT_DIR$/Bucles/ejercicios2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetos/objetos.iml" filepath="$PROJECT_DIR$/objetos/objetos.iml" />
+    </modules>
+  </component>
+</project>

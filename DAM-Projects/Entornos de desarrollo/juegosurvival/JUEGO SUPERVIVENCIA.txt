@@ -1,0 +1,7 @@
+JUEGO SUPERVIVENCIA
+- 10 días
+- Menu 
+- Tienda ✅
+- Guardar en la posición correcta el articulo comprado en el mismo switch.VALOR COMPRAR dentro de [] para igualarlo en la posición vacia.
+- Comer - Comprobar si hay una bebida en tu inventario, aumentar la stat de hambre y salud
+- Beber - Comprobar si hay comida en tu inventario, se hidrata y su salud se recupera.

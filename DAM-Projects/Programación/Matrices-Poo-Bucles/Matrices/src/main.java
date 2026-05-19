@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class main {
+    static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int tamy = sc.nextInt();
+        int tamx = sc.nextInt();
+        int [][] posicion = new int[tamy][tamx];
+
+        for (int i = 0; i < tamy; i++) {
+            for (int j = 0; j <tamx ; j++) {
+                posicion[i][j] = sc.nextInt();
+            }
+        }
+        for (int i = 0; i < tamy; i++) {
+            int suma=0;
+            for (int j = 0; j <tamx ; j++) {
+                suma+=posicion[i][j];
+            }
+            System.out.println(suma);
+        }
+    }
+}

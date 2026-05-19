@@ -1,0 +1,5 @@
+✅Guardar los valores de la Matriz
+✅Comprobar que una fila tenga los mismos valores(1) "Una idea puede ser el uso de booleanos"
+O sea que si ve que uno ya es 0 inmediatamente es False, pero si uno llega hasta el final continua en true y por lo tanto --> elimina la fila 
+✅Actualizar la matriz, volver a buscar y si no hay "Imprimir como se ve la matriz"
+✅
