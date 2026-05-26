@@ -1,0 +1,18 @@
+Al inicio de la clase, pensé en:
+¿Cómo podría aplicar los conocimientos obtenidos hasta el momento de if y else?
+Me planteé 2 opciones, hacer un videojuego o una trivia; me gustan las trivias,
+por eso escogí esa opción.
+
+En primer lugar, después de haber importado las clases y todo el rollo.
+utilice do { para comenzar con el bucle. (Iván me dio la idea de que, sería bueno que incluyera en el juego de volver a jugar. No sabía como hacerlo; por lo que tuve que buscar en internet nuevamente, me gustó esa sugerencia, porque aprendí como usar el do y while de forma básica.)
+
+Coloque "souts" que mostraran por terminal, el titulo de mi juego, mi primera pregunta, y sus respectivas opciones.
+Me di cuenta de que estos elementos los utilizaría 7 veces más; así que, copie y pegué el formato unas 7 veces.
+
+Después, para determinar si una respuesta era correcta o no lo era, use If y else. Como usé Strings al inicio, empleé el .equalsignorecase para que dentro de la comparación, esta pudiera reconocer el carácter.
+
+En cuanto al sistema de puntuación, no tenía muy claro como lo haría así que tuve que googlearlo, aprendí que para que este vaya en aumento, 
+primero mi valor "puntuación" debía iniciar en 0, y en cada if donde la respuesta era correcta "puntuación" aumentaría así: puntuación++;
+de esta manera, supe que al hacer un sout, haría una sumatoria de todo lo recogido hasta ese punto. 
+
+Antes de terminar el código cerré el bucle con un }while para que de esta manera si cumple la condición de si, el juego volviera a iniciar; de otra manera, aparecerá por terminal "Gracias por jugar" 
