@@ -1,0 +1,42 @@
+En los objetos de la tienda se repiten los objetos- debe ser diferente. 
+la única forma de comprar es escribiendo la palabra como tal
+
+en el inventario debo encontrar la forma de que se guarde en las ranuras y no dejar ninguna vacia
+encontrar la forma en que cuando escoja se elimine de esa ranura.
+¿El array recompensas debería ser un int? de esa manera cuando pida algo ya sabre cual es
+y se almacenara 0 o + 1, etc. (OPCION SI NO SALE BIEN LA OTRA)
+
+Array tienda (String) 
+Definir precio para los objetos en base a los String (.equals) 
+
+String [] recompensas = {"Pocion de vida","Pocion magica","Pocion de daño","Pocion de daño extremo"};
+
+hacer un contador dentro del for de buscar palabra para que cuandoe este sea 1, ya no busque en otro y
+deje tu inventario vacio. 
+
+debo reajustar en recompensas para que busque hasta que cumple que es "null"
+
+
+System.out.println("¿Qué vas a comprar?");
+                    sc.nextLine();
+                    String palabrabuscada=sc.nextLine();
+                    for (String palabra : recompensas) {
+                        if (palabra.equals(palabrabuscada)) {
+                            inventario[contadorInventario]=palabrabuscada;
+                        }
+                    }
+
+=null;
+for (compruebe array) 
+if (inventario[i]=null) {
+break; <-- forzar 
+} 
+
+1. Fijarte en Recompensa aleatorio hacer un for para que guarde la recompensa donde este vacio!!!! ✅
+2. Cuando usas el objeto el lugar toma el valor "null" ✅
+3. Preguntar siempre ¿quieres usar una pocion? (SI/NO) para permitir más interacción ✅
+
+
+Corregir los puntos de magia, ya que estan aumentando aunque no ataquemos. ✅
+Mostrar solo los objetos disponibles 
+Aumentar la vida de los enemigos después del combate.
