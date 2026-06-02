@@ -24,58 +24,85 @@ public class Main {
         System.out.print("Código de Barras (texto): "); p.codigoBarras = sc.nextLine();
         System.out.print("Activo (1 sí / 0 no): "); p.activo = Integer.parseInt(sc.nextLine());
 
-        // Enviamos el objeto completo al DAO
+        // Con este metodo se envia el objeto completo al DAO
         dao.insertarProducto(p);
 
         System.out.println("\n¡Producto registrado correctamente!");
     }
+    private static void registrarMarcaDC(HipermercadoDAO dao, Scanner sc ){
+        Marca marca =new Marca();
+        System.out.println("Registro de nueva Marca");
+        System.out.print("Nombre: "); marca.nombre=sc.nextLine();
+        System.out.print("País: "); marca.pais=sc.nextLine();
+        System.out.print("Premium (1 sí/ 0 no): "); marca.premium=sc.nextInt();
+
+        dao.insertarMarca(marca);
+        System.out.println("\n¡Marca registrada correctamente!");
+
+    }
+    private static void menuProductos(HipermercadoDAO dao, Scanner sc) {
+        System.out.println("\n--- GESTIÓN PRODUCTOS ---");
+        System.out.println("1. Buscar por ID | 2. Registrar | 3. Filtrar Categoría | 4. Filtrar Stock | 5. Eliminar");
+        int op = Integer.parseInt(sc.nextLine());
+
+        switch(op) {
+            case 1:
+                System.out.print("Id del producto: "); dao.mostrarProductoPorId(sc.nextInt()); break;
+            case 2:
+                System.out.print("Iniciando registro del producto: "); registrarProductoDesdeConsola(dao,sc); break;
+            case 3:
+                System.out.print("Id de la seccion: "); dao.filtrarProductoPorCategoria (sc.nextInt()); break;
+            case 4:
+                System.out.print("Introduce la cantidad de Stock: "); int stockPro =sc.nextInt();sc.nextLine();
+                System.out.println("¿Qué filtro aplicar? (>, <, =): "); String opcion =sc.nextLine();
+                dao.filtrarProductoPorStock(stockPro, opcion);
+                break;
+
+            case 5:
+                System.out.println(); dao.eliminarProducto(sc.nextInt());
+
+        }
+    }
+    private static void menuMarcas(HipermercadoDAO dao, Scanner sc){
+        System.out.println("\n--- GESTIÓN MARCAS ---");
+        System.out.println("1. Buscar por ID | 2. Registrar | 3. Eliminar");
+        int op = Integer.parseInt(sc.nextLine());
+
+        switch(op) {
+            case 1: dao.mostrarProductosPorMarca(sc.nextInt()); break;
+            case 2: registrarMarcaDC(dao, sc); break;
+            case 3: dao.eliminarMarca(sc.nextInt()); break;
+        }
+    }
+
     public static void main(String[] args) {
         HipermercadoDAO dao = new HipermercadoDAO();
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
-
-        while (!salir) {
+        while (!salir){
             System.out.println("\n=== MENÚ HIPERMERCADO ===");
-            System.out.println("1. Buscar producto por ID");
-            System.out.println("2. Registrar nuevo producto");
-            System.out.println("3. Filtrar por categoría (sección)");
-            System.out.println("4. Eliminar producto");
-            System.out.println("5. Mostrar productos por marca");
-            System.out.println("6. Salir");
-            System.out.print("Seleccione una opción: ");
-
-            int opcion = sc.nextInt();
+            System.out.println("1. Gestionar productos");
+            System.out.println("2. Gestionar marcas");
+            System.out.println("3. Salir");
+            System.out.print("Selecciona una opción: ");
+            int opcionTablas=sc.nextInt();
             sc.nextLine();
 
-            switch (opcion) {
+            switch (opcionTablas){
                 case 1:
-                    System.out.print("ID del producto: ");
-                    dao.mostrarProductoPorId(sc.nextInt());
-                    break;
+                    menuProductos(dao,sc); break;
                 case 2:
-                    System.out.println("Iniciando registro de producto...");
-                    registrarProductoDesdeConsola(dao,sc);
-                    break;
+                    menuMarcas(dao, sc); break;
                 case 3:
-                    System.out.print("ID de la categoría/sección: ");
-                    dao.filtrarProductoPorCategoria (sc.nextInt());
-                    break;
-                case 4:
-                    System.out.print("ID del producto a eliminar: ");
-                    dao.eliminarProducto(sc.nextInt());
-                    break;
-                case 5:
-                    System.out.print("ID de la marca: ");
-                    dao.mostrarProductosPorMarca(sc.nextInt());
-                    break;
-                case 6:
-                    salir = true;
-                    System.out.println("Cerrando sistema...");
+                    salir=true;
+                    System.out.println("Cerrando gestor de BD");
                     break;
                 default:
                     System.out.println("Opción no válida.");
             }
         }
-        sc.close();
+
+
+
     }
 }
