@@ -69,9 +69,12 @@ public class Main {
         int op = Integer.parseInt(sc.nextLine());
 
         switch(op) {
-            case 1: dao.mostrarProductosPorMarca(sc.nextInt()); break;
-            case 2: registrarMarcaDC(dao, sc); break;
-            case 3: dao.eliminarMarca(sc.nextInt()); break;
+            case 1:
+                System.out.print("Id de la Marca: "); dao.mostrarProductosPorMarca(sc.nextInt()); break;
+            case 2:
+                System.out.print("Iniciando registro del producto: "); registrarMarcaDC(dao, sc); break;
+            case 3:
+                 dao.eliminarMarca(sc.nextInt()); break;
         }
     }
 
