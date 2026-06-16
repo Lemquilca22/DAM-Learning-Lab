@@ -1,4 +1,4 @@
-# PokéAPI Web Search  
+# PokéAPI Web Search 🦖🔥
 
 Aplicación web desarrollada en **Spring Boot** que consume la **PokéAPI** pública para buscar y mostrar estadísticas, tipos y habilidades de Pokémon en tiempo real.
 
@@ -8,11 +8,17 @@ Aplicación web desarrollada en **Spring Boot** que consume la **PokéAPI** púb
 
 ---
 
-## 📸 Capturas de Pantalla
+## Capturas de Pantalla
 
-| Buscador Principal | Detalle del Pokémon |
-| :---: | :---: |
-| ![Buscador](cap1.png) | ![Detalle](cap2.png) |
+### Buscador Principal
+<p align="center">
+  <img src="cap1.png" alt="Buscador Principal" width="100%">
+</p>
+
+### Detalle del Pokémon
+<p align="center">
+  <img src="cap2.png" alt="Detalle del Pokémon" width="100%">
+</p>
 
 ---
 
