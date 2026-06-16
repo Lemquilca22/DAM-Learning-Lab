@@ -1,10 +1,10 @@
-# PokéAPI Web Search 🌐🔋
+# PokéAPI Web Search  
 
 Aplicación web desarrollada en **Spring Boot** que consume la **PokéAPI** pública para buscar y mostrar estadísticas, tipos y habilidades de Pokémon en tiempo real.
 
-## 🚀 Demo En Vivo
+## Demo En Vivo
 
-👉 **[Prueba la aplicación aquí](https://pokeapi-web.onrender.com)** *(Desplegado en Render con Docker)*
+**[Prueba la aplicación aquí](https://pokeapi-web.onrender.com)** *(Desplegado en Render con Docker)*
 
 ---
 
@@ -12,13 +12,11 @@ Aplicación web desarrollada en **Spring Boot** que consume la **PokéAPI** púb
 
 | Buscador Principal | Detalle del Pokémon |
 | :---: | :---: |
-| ![Buscador](ruta_de_tu_captura_1.png) | ![Detalle](ruta_de_tu_captura_2.png) |
-
-> 💡 *Tip: Sube las capturas a una carpeta llamada `img` en tu repositorio y cambia `ruta_de_tu_captura_1.png` por `img/tu_foto.png`.*
+| ![Buscador](cap1.png) | ![Detalle](cap2.png) |
 
 ---
 
-## ✨ Características y Tecnologías
+## Características y Tecnologías
 
 * **Backend:** Java 17 y Spring Boot (Spring Web) bajo patrón **MVC**.
 * **Frontend:** Plantillas HTML dinámicas con **Thymeleaf**.
@@ -26,7 +24,7 @@ Aplicación web desarrollada en **Spring Boot** que consume la **PokéAPI** púb
 * **Despliegue:** Contenerización nativa con **Docker** (Dockerfile multi-stage).
 * **Hosting:** Servidor en la nube con **Render**.
 
-## 🐳 Dockerfile Utilizado
+## Dockerfile Utilizado
 
 ```dockerfile
 FROM maven:3.8.5-openjdk-17 AS build
